@@ -2,7 +2,11 @@
   <div id="app" class="block">
     <h1>TODO APP</h1>
 
-    <router-view />
+    <transition>
+      <keep-alive>
+        <router-view />
+      </keep-alive>
+    </transition>
   </div>
 </template>
 
