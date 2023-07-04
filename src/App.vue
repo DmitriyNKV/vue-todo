@@ -1,12 +1,7 @@
 <template>
   <div id="app" class="block">
     <h1>TODO APP</h1>
-
-    <transition>
-      <keep-alive>
-        <router-view />
-      </keep-alive>
-    </transition>
+    <router-view />
   </div>
 </template>
 

@@ -61,8 +61,10 @@ export default {
       this.saveToLocalStorage();
     },
     updateTodo(updatedTodo) {
-      const index = this.todos.findIndex((todo) => todo.id === updatedTodo.id);
-      this.todos[index] = updatedTodo;
+      const newTodos = [...this.todos];
+      const index = newTodos.findIndex((todo) => todo.id === updatedTodo.id);
+      this.todos = [...newTodos];
+
       this.saveToLocalStorage();
     },
     removeAllTodos: function () {
